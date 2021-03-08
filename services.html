@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A young and talented web studio, which is developing single-page
+      sites, business sites, corporate sites, online shops and web
+      services. Let me show you a little bit more about us !"
+    />
+    <link rel="icon" href="#" type="image/x-icon" />
+    <title>Web Agency</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Linden+Hill&family=Parisienne&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/services.css" />
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <!-- Navigation -->
+    <nav>
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <p>ELEVEN <span>STUDIO</span></p>
+        </a>
+      </div>
+
+      <div class="bloc-menu-left">
+        <!-- Btn language -->
+        <div class="container-lang">
+          <div class="lang-active">ENG <span>▾</span></div>
+          <ul class="list-lang">
+            <li><a href="#">FRA</a></li>
+            <li><a href="#">ESP</a></li>
+            <li><a href="#">THA</a></li>
+          </ul>
+        </div>
+
+        <!-- Btn nav -->
+        <div class="btn-menu">
+          <svg class="elipse-menu-1">
+            <use xlink:href="ressources/icons.svg#elipse-menu-1"></use>
+          </svg>
+          <svg class="elipse-menu-2">
+            <use xlink:href="ressources/icons.svg#elipse-menu-2"></use>
+          </svg>
+          <svg class="menu-open">
+            <use xlink:href="ressources/icons.svg#menu-open"></use>
+          </svg>
+          <svg class="menu-close">
+            <use xlink:href="ressources/icons.svg#menu-close"></use>
+          </svg>
+        </div>
+
+        <!-- items nav -->
+        <div class="items-nav">
+          <div class="flex-items">
+            <div class="items-left">
+              <a href="services.html"><p>SERVICES</p></a>
+              <a href="works.html"><p>WORKS</p></a>
+              <a href="about.html"><p>WE ARE</p></a>
+            </div>
+            <div class="items-right">
+              <a href="index.html"><p>HOME</p></a>
+              <a href="contact.html"><p>CONTACT</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main section -->
+    <main>
+      <div class="main-text">
+        <p>
+          <span>Waht we do ?</span>
+          <span
+            >We belive that we can live in a world where
+            <strong>every producs</strong> or services has an easy to use
+            expirence on all plateforms. And our mission is to make it
+            happen.</span
+          >
+        </p>
+      </div>
+    </main>
+
+    <hr />
+
+    <!-- Bloc section -->
+    <section class="bloc-services">
+      <div class="bloc">
+        <h2 class="t1">Website</h2>
+        <div class="text-flex">
+          <p>
+            Nowaday every business needs a website. It is a reality, when a
+            person is looking for a services or else : Gym, Restaurant... The
+            first thing to do is checking online what’s available. This is where
+            we come in, our goal is to make you
+            <span>stand out from the crowd</span>, to be above the competitors.
+            We’re specialized in small and medium business website that is why
+            we can atcually provide to you the best optimised website that you
+            could ever find.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="bloc bloc-2">
+        <h2 class="t2">E-com.</h2>
+        <div class="text-flex">
+          <p>
+            Because each company has a project of its own, we have chosen to
+            offer <span>unique offers</span> that adapt to all your needs. We
+            will build an e-commerce website who has been designed and developed
+            by professionnals through the CMS Wordpress in order to give you the
+            best and simplest experience ever.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="bloc">
+        <h2 class="t3">Design</h2>
+        <div class="text-flex">
+          <p>
+            Let us help you to put a vision on your ideas and provide your
+            business all what it deserve. Let’s join your imagination and our
+            creativity to create <span>your identity</span> <br />
+            From a simple logo to a complete brand campaing, all you need is a
+            little imagination, we'll create everything else.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+    </section>
+
+    <footer>
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#twitter-2"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#insta-2"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#facebook-2"></use>
+        </svg>
+      </div>
+    </footer>
+
+    <script>
+      // Navigation
+      const mobileBtn = document.querySelector('.btn-menu')
+      const menuOpen = document.querySelector('.items-nav')
+      const items = document.querySelectorAll('.items-nav a')
+      const btnLang = document.querySelector('.container-lang')
+      const menuLang = document.querySelector('.list-lang')
+
+      //Toggle menu
+      mobileBtn.addEventListener('click', () => {
+        mobileBtn.classList.toggle('active')
+        menuOpen.classList.toggle('active')
+      })
+
+      //Close menu
+      items.forEach((item) => {
+        item.addEventListener('click', () => {
+          mobileBtn.classList.toggle('active')
+          menuOpen.classList.toggle('active')
+        })
+      })
+
+      // Language menu
+      btnLang.addEventListener('click', () => {
+        menuLang.classList.toggle('active')
+        btnLang.classList.toggle('active')
+      })
+      
+      // Animation cursor
+      const cursor = document.querySelector('.cursor')
+
+      document.addEventListener('mousemove', (e) => {
+        cursor.setAttribute(
+          'style',
+          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
+        )
+      })
+      document.addEventListener('click', () => {
+        cursor.classList.add('expand')
+
+        setTimeout(() => {
+          cursor.classList.remove('expand')
+        }, 500)
+      })
+    </script>
+  </body>
+</html>

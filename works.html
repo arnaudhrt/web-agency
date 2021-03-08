@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A young and talented web studio, which is developing single-page
+      sites, business sites, corporate sites, online shops and web
+      services. Let me show you a little bit more about us !"
+    />
+    <link rel="icon" href="#" type="image/x-icon" />
+    <title>Web Agency</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;1,200;1,300&family=Inria+Serif&family=Quicksand&family=Parisienne&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/works.css" />
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <!-- Navigation -->
+    <nav>
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <p>ELEVEN <span>STUDIO</span></p>
+        </a>
+      </div>
+
+      <div class="bloc-menu-left">
+        <!-- Btn language -->
+        <div class="container-lang">
+          <div class="lang-active">ENG <span>▾</span></div>
+          <ul class="list-lang">
+            <li><a href="#">FRA</a></li>
+            <li><a href="#">ESP</a></li>
+            <li><a href="#">THA</a></li>
+          </ul>
+        </div>
+
+        <!-- Btn nav -->
+        <div class="btn-menu">
+          <svg class="elipse-menu-1">
+            <use xlink:href="ressources/icons.svg#elipse-menu-1"></use>
+          </svg>
+          <svg class="elipse-menu-2">
+            <use xlink:href="ressources/icons.svg#elipse-menu-2"></use>
+          </svg>
+          <svg class="menu-open">
+            <use xlink:href="ressources/icons.svg#menu-open"></use>
+          </svg>
+          <svg class="menu-close">
+            <use xlink:href="ressources/icons.svg#menu-close"></use>
+          </svg>
+        </div>
+
+        <!-- items nav -->
+        <div class="items-nav">
+          <div class="flex-items">
+            <div class="items-left">
+              <a href="services.html"><p>SERVICES</p></a>
+              <a href="works.html"><p>WORKS</p></a>
+              <a href="about.html"><p>WE ARE</p></a>
+            </div>
+            <div class="items-right">
+              <a href="index.html"><p>HOME</p></a>
+              <a href="contact.html"><p>CONTACT</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main section -->
+    <main>
+      <div class="bloc-left">
+        <svg class="twenty">
+          <use xlink:href="ressources/icons.svg#20"></use>
+        </svg>
+        <span>21'</span>
+      </div>
+      <div class="bloc-right">
+        <h2><span>Project</span> List</h2>
+        <div class="project">
+          <p>
+            <span>1</span>
+            <a href="https://www.huretfrancoisplomberie.fr" target="_blank"
+              >Huret Plomberie</a
+            >
+          </p>
+          <hr />
+          <p>
+            <span>2</span>
+            <a href="https://www.pierrehuret.fr" target="_blank"
+              >Watanna Kindergarten</a
+            >
+          </p>
+          <hr />
+          <p>
+            <span>3</span>
+            <a href="https://www.arnaudhuret.fr">Arnaud Portfolio</a>
+          </p>
+          <hr />
+          <p>
+            <span>5</span>
+            <a href="https://www.wirakornbunnag.com" target="_blank"
+              >Wirakorn Portfolio</a
+            >
+          </p>
+          <hr />
+          <p><span>4</span> <a href="">Gym Center</a></p>
+          <hr />
+          <p><span>6</span> <a href="">Travel Agency</a></p>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#twitter-2"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#insta-2"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="social-icon">
+          <use xlink:href="ressources/icons.svg#facebook-2"></use>
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      // Navigation
+      const mobileBtn = document.querySelector('.btn-menu')
+      const menuOpen = document.querySelector('.items-nav')
+      const items = document.querySelectorAll('.items-nav a')
+      const btnLang = document.querySelector('.container-lang')
+      const menuLang = document.querySelector('.list-lang')
+
+      //Toggle menu
+      mobileBtn.addEventListener('click', () => {
+        mobileBtn.classList.toggle('active')
+        menuOpen.classList.toggle('active')
+      })
+
+      //Close menu
+      items.forEach((item) => {
+        item.addEventListener('click', () => {
+          mobileBtn.classList.toggle('active')
+          menuOpen.classList.toggle('active')
+        })
+      })
+
+      // Language menu
+      btnLang.addEventListener('click', () => {
+        menuLang.classList.toggle('active')
+        btnLang.classList.toggle('active')
+      })
+      
+      // Animation cursor
+      const cursor = document.querySelector('.cursor')
+
+      document.addEventListener('mousemove', (e) => {
+        cursor.setAttribute(
+          'style',
+          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
+        )
+      })
+      document.addEventListener('click', () => {
+        cursor.classList.add('expand')
+
+        setTimeout(() => {
+          cursor.classList.remove('expand')
+        }, 500)
+      })
+    </script>
+  </body>
+</html>

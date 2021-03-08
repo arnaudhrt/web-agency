@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A young and talented web studio, which is developing single-page
+      sites, business sites, corporate sites, online shops and web
+      services. Let me show you a little bit more about us !"
+    />
+    <link rel="icon" href="#" type="image/x-icon" />
+    <title>Web Agency</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;1,200;1,300&family=Inria+Serif&family=Quicksand&family=Parisienne&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <!-- Navigation -->
+    <nav>
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <p>ELEVEN <span>STUDIO</span></p>
+        </a>
+      </div>
+
+      <div class="bloc-menu-left">
+        <!-- Btn language -->
+        <div class="container-lang">
+          <div class="lang-active">ENG <span>▾</span></div>
+          <ul class="list-lang">
+            <li><a href="#">FRA</a></li>
+            <li><a href="#">ESP</a></li>
+            <li><a href="#">THA</a></li>
+          </ul>
+        </div>
+
+        <!-- Btn nav -->
+        <div class="btn-menu">
+          <svg class="elipse-menu-1">
+            <use xlink:href="ressources/icons.svg#elipse-menu-1"></use>
+          </svg>
+          <svg class="elipse-menu-2">
+            <use xlink:href="ressources/icons.svg#elipse-menu-2"></use>
+          </svg>
+          <svg class="menu-open">
+            <use xlink:href="ressources/icons.svg#menu-open"></use>
+          </svg>
+          <svg class="menu-close">
+            <use xlink:href="ressources/icons.svg#menu-close"></use>
+          </svg>
+        </div>
+
+        <!-- items nav -->
+        <div class="items-nav">
+          <div class="flex-items">
+            <div class="items-left">
+              <a href="services.html"><p>SERVICES</p></a>
+              <a href="works.html"><p>WORKS</p></a>
+              <a href="about.html"><p>WE ARE</p></a>
+            </div>
+            <div class="items-right">
+              <a href="index.html"><p>HOME</p></a>
+              <a href="contact.html"><p>CONTACT</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main section -->
+    <main>
+      <div class="bloc-left">
+        <h1>LET'S BUILD<br />TOMORROW,<br />TODAY</h1>
+      </div>
+
+      <div class="bloc-right">
+        <div class="transY">
+          <div class="bloc social">
+            <h2>SOCIAL MEDIA</h2>
+            <div class="social-icon">
+              <svg>
+                <use xlink:href="ressources/icons.svg#twitter-2">
+                  <a href="#"></a>
+                </use>
+              </svg>
+              <svg>
+                <use xlink:href="ressources/icons.svg#insta-2">
+                  <a href="#"></a>
+                </use>
+              </svg>
+              <svg>
+                <use xlink:href="ressources/icons.svg#facebook-2">
+                  <a href="#"></a>
+                </use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="bloc contact">
+            <h2>CONTACT</h2>
+            <div class="social-icon">
+              <svg>
+                <use xlink:href="ressources/icons.svg#whatsapp">
+                  <a href="#"></a>
+                </use>
+              </svg>
+              <svg>
+                <use xlink:href="ressources/icons.svg#mail">
+                  <a href="#"></a>
+                </use>
+              </svg>
+              <svg>
+                <use xlink:href="ressources/icons.svg#skype">
+                  <a href="#"></a>
+                </use>
+              </svg>
+            </div>
+            <span><a href="mailto:#">contact@neobreed.com</a></span>
+          </div>
+
+          <div class="bloc phone">
+            <h2>PHONE</h2>
+            <span><a href="tel:#">+(33)06 46 45 21 80</a></span>
+            <span><a href="tel:#">+(33)07 71 67 02 99</a></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Navigation
+      const mobileBtn = document.querySelector('.btn-menu')
+      const menuOpen = document.querySelector('.items-nav')
+      const items = document.querySelectorAll('.items-nav a')
+      const btnLang = document.querySelector('.container-lang')
+      const menuLang = document.querySelector('.list-lang')
+
+      //Toggle menu
+      mobileBtn.addEventListener('click', () => {
+        mobileBtn.classList.toggle('active')
+        menuOpen.classList.toggle('active')
+      })
+
+      //Close menu
+      items.forEach((item) => {
+        item.addEventListener('click', () => {
+          mobileBtn.classList.toggle('active')
+          menuOpen.classList.toggle('active')
+        })
+      })
+
+      // Language menu
+      btnLang.addEventListener('click', () => {
+        menuLang.classList.toggle('active')
+        btnLang.classList.toggle('active')
+      })
+
+      // Animation cursor
+      const cursor = document.querySelector('.cursor')
+
+      document.addEventListener('mousemove', (e) => {
+        cursor.setAttribute(
+          'style',
+          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
+        )
+      })
+      document.addEventListener('click', () => {
+        cursor.classList.add('expand')
+
+        setTimeout(() => {
+          cursor.classList.remove('expand')
+        }, 500)
+      })
+    </script>
+  </body>
+</html>

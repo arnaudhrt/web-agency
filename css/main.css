@@ -39,8 +39,8 @@ a {
 
 /* ------------------ Navigation ------------------ */
 .cursor {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border: 1px solid #ddd;
   border-radius: 50%;
   position: absolute;
@@ -1013,7 +1013,7 @@ main {
   width: 90%;
   position: relative;
   border: 1px solid #f4eded;
-  padding: 110px 0 90px 50px;
+  padding: 110px 0 40px 50px;
 }
 .container-about p:first-child {
   max-width: 570px;
@@ -1069,6 +1069,41 @@ main {
   bottom: 45px;
   right: -75px;
 }
+.btn-we-are {
+  font-size: 24px;
+  font-family: var(--font-poppins);
+  margin: 20px auto 0;
+  transform: translateX(-100%);
+  position: relative;
+}
+.btn-we-are a {
+  color: #ddd;
+}
+.btn-we-are::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #ddd;
+  width: 0;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 200ms ease-in-out;
+}
+.btn-we-are:hover::before {
+  width: 90%;
+}
+.btn-we-are::after {
+  content: url(../ressources/fleche.svg);
+  position: absolute;
+  top: -3px;
+  right: -65%;
+  transition: transform 200ms ease-in-out;
+}
+.btn-we-are:hover::after {
+  transform: scale(1.1);
+}
 @media screen and (max-width: 1200px) {
   .office-pic {
     width: 340px;
@@ -1084,6 +1119,9 @@ main {
     font-size: 140px;
     -webkit-text-stroke: 1px var(--bg-dark);
     top: -120px;
+  }
+  .btn-we-are {
+    transform: translateX(-20%);
   }
 }
 @media screen and (max-width: 800px) {
@@ -1206,6 +1244,13 @@ main {
 .bloc-social svg:hover {
   fill: var(--text-color-white);
   transform: scale(1.1);
+}
+.btn-we-are.btn-contact {
+  margin: 40px auto 0;
+  transform: translateX(0);
+}
+.btn-we-are.btn-contact::after {
+  right: -50%;
 }
 @media screen and (max-width: 1350px) {
   .contact h2 {

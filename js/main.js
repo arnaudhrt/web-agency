@@ -85,10 +85,7 @@ window.addEventListener('scroll', (e) => {
 const cursor = document.querySelector('.cursor')
 
 document.addEventListener('mousemove', (e) => {
-  cursor.setAttribute(
-    'style',
-    'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
-  )
+  cursor.setAttribute('style', 'top: ' + (e.pageY - 22) + 'px; left: ' + (e.pageX - 22) + 'px;')
 })
 document.addEventListener('click', () => {
   cursor.classList.add('expand')

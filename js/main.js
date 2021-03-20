@@ -94,3 +94,14 @@ document.addEventListener('click', () => {
     cursor.classList.remove('expand')
   }, 500)
 })
+
+document.addEventListener('mouseover', (e) => {
+  const element = e.target
+  const computed = window.getComputedStyle(element)['cursor']
+  console.log(computed)
+  if (computed !== 'auto') {
+    cursor.classList.add('over-anim')
+  } else {
+    cursor.classList.remove('over-anim')
+  }
+})

@@ -37,9 +37,9 @@ button {
 
 /* ------------------ Navigation ------------------ */
 .cursor {
-  width: 55px;
-  height: 55px;
-  border: 1px solid #DDD;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
   border-radius: 50%;
   position: absolute;
   transition-duration: 300ms;
@@ -73,16 +73,6 @@ nav {
 /* Logo */
 .nav-logo {
   margin-left: 35px;
-}
-.nav-logo a {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 48px;
-  color: var(--text-color-white);
-}
-.nav-logo span {
-  color: var(--text-color-red);
-  font-weight: bold;
 }
 
 /* Bloc left */
@@ -321,7 +311,6 @@ nav {
     transform: rotate(360deg);
   }
 }
-
 /* Media queries nav bar */
 @media screen and (min-width: 1600px) {
   .btn-menu {
@@ -363,9 +352,9 @@ nav {
     z-index: 30;
   }
 }
-@media screen and (max-width: 700px) {
-  .nav-logo a {
-    font-size: 38px;
+@media screen and (max-width: 550px) {
+  .nav-logo img {
+    width: 270px;
   }
 }
 @media screen and (max-width: 500px) {

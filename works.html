@@ -25,10 +25,8 @@
     <!-- Navigation -->
     <nav>
       <!-- Logo -->
-      <div class="nav-logo">
-        <a href="index.html">
-          <p>ELEVEN <span>STUDIO</span></p>
-        </a>
+      <div class="nav-logo cursor-hide">
+        <a href="index.html"><img src="ressources/logo.svg" alt="logo agency" /></a>
       </div>
 
       <div class="bloc-menu-left">
@@ -88,16 +86,12 @@
         <div class="project">
           <p>
             <span>1</span>
-            <a href="https://www.huretfrancoisplomberie.fr" target="_blank"
-              >Huret Plomberie</a
-            >
+            <a href="https://www.huretfrancoisplomberie.fr" target="_blank">Huret Plomberie</a>
           </p>
           <hr />
           <p>
             <span>2</span>
-            <a href="https://www.pierrehuret.fr" target="_blank"
-              >Watanna Kindergarten</a
-            >
+            <a href="https://www.pierrehuret.fr" target="_blank">Watanna Kindergarten</a>
           </p>
           <hr />
           <p>
@@ -107,9 +101,7 @@
           <hr />
           <p>
             <span>5</span>
-            <a href="https://www.wirakornbunnag.com" target="_blank"
-              >Wirakorn Portfolio</a
-            >
+            <a href="https://www.wirakornbunnag.com" target="_blank">Wirakorn Portfolio</a>
           </p>
           <hr />
           <p><span>4</span> <a href="">Gym Center</a></p>
@@ -122,17 +114,17 @@
     <div class="footer">
       <div>
         <svg class="social-icon">
-          <use xlink:href="ressources/icons.svg#twitter-2"></use>
+          <use xlink:href="ressources/icons.svg#linkedin-2"></use>
         </svg>
       </div>
       <div>
         <svg class="social-icon">
-          <use xlink:href="ressources/icons.svg#insta-2"></use>
+          <use xlink:href="ressources/icons.svg#pinterest-2"></use>
         </svg>
       </div>
       <div>
         <svg class="social-icon">
-          <use xlink:href="ressources/icons.svg#facebook-2"></use>
+          <use xlink:href="ressources/icons.svg#behance-2"></use>
         </svg>
       </div>
     </div>
@@ -164,15 +156,12 @@
         menuLang.classList.toggle('active')
         btnLang.classList.toggle('active')
       })
-      
+
       // Animation cursor
       const cursor = document.querySelector('.cursor')
 
       document.addEventListener('mousemove', (e) => {
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
-        )
+        cursor.setAttribute('style', 'top: ' + (e.pageY - 22) + 'px; left: ' + (e.pageX - 22) + 'px;')
       })
       document.addEventListener('click', () => {
         cursor.classList.add('expand')

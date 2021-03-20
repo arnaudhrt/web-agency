@@ -1183,6 +1183,8 @@ main {
 /* ------------------ Contact section ------------------ */
 .contact {
   width: 100%;
+  max-width: 1440px;
+  margin: auto;
   height: auto;
   position: relative;
   display: flex;
@@ -1252,6 +1254,24 @@ main {
 .btn-we-are.btn-contact::after {
   right: -50%;
 }
+.rect-contact {
+  width: 85px;
+  height: 15px;
+  fill: #b53154;
+  position: absolute;
+  bottom: 27%;
+  right: 15%;
+}
+.bracket-contact {
+  position: absolute;
+  width: 91px;
+  height: 86px;
+  fill: #554b4d;
+  top: -2%;
+  left: 1%;
+  z-index: 10;
+  transform: rotate(-90deg);
+}
 @media screen and (max-width: 1350px) {
   .contact h2 {
     font-size: 150px;
@@ -1266,6 +1286,13 @@ main {
   .contact h2 {
     font-size: 100px;
   }
+  .bracket-contact {
+    width: 70px;
+    height: 70px;
+  }
+  .rect-contact {
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .contact h2 {
@@ -1279,6 +1306,9 @@ main {
   }
   .contact-bloc-center {
     width: 80%;
+  }
+  .bracket-contact {
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1318,4 +1348,11 @@ footer p {
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.05em;
+}
+.go-up {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  width: 51px;
+  height: 37px;
 }

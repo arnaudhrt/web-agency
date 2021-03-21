@@ -79,11 +79,10 @@
     <section class="who">
       <div class="container-who">
         <p>
-          Eleven Studio is an international web agency, specilised in Web Design
-          and Web Development who works in several countries
-          <span>around the world</span>. The two founders are french twin
-          brothers : Pierre & Arnaud. They co-founded the angecy in 2019 and now
-          hired a team of different nationality.
+          Eleven Studio is an international web agency, specilised in Web Design and Web Development who works in
+          several countries
+          <span>around the world</span>. The two founders are french twin brothers : Pierre & Arnaud. They co-founded
+          the angecy in 2019 and now hired a team of different nationality.
         </p>
         <h1 class="inline-who-h1">Who we are</h1>
         <h1 class="column-who-h1">
@@ -91,11 +90,7 @@
           we<br />
           are.
         </h1>
-        <img
-          class="office-pic"
-          src="ressources/we-are.png"
-          alt="open space work"
-        />
+        <img class="office-pic" src="ressources/we-are.png" alt="open space work" />
         <div class="btn click-right">
           <svg>
             <use xlink:href="ressources/icons.svg#click-right"></use>
@@ -107,10 +102,9 @@
     <section class="where">
       <div class="container-where">
         <p>
-          We curently work all <span>around the world</span>, but most of our
-          mission is in Europe, North America and South Asia. We used to help
-          all kind of business to build their own website, online shops or brand
-          design. It is always a pleasure to create somthing intresting and new.
+          We curently work all <span>around the world</span>, but most of our mission is in Europe, North America and
+          South Asia. We used to help all kind of business to build their own website, online shops or brand design. It
+          is always a pleasure to create somthing intresting and new.
         </p>
         <h1 class="inline-where-h1">Where we work</h1>
         <h1 class="column-where-h1">
@@ -188,10 +182,7 @@
       const cursor = document.querySelector('.cursor')
 
       document.addEventListener('mousemove', (e) => {
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
-        )
+        cursor.setAttribute('style', 'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;')
       })
       document.addEventListener('click', () => {
         cursor.classList.add('expand')
@@ -199,6 +190,17 @@
         setTimeout(() => {
           cursor.classList.remove('expand')
         }, 500)
+      })
+
+      document.addEventListener('mouseover', (e) => {
+        const element = e.target
+        const computed = window.getComputedStyle(element)['cursor']
+        console.log(computed)
+        if (computed !== 'auto') {
+          cursor.classList.add('over-anim')
+        } else {
+          cursor.classList.remove('over-anim')
+        }
       })
     </script>
   </body>

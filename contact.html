@@ -87,17 +87,17 @@
             <h2>SOCIAL MEDIA</h2>
             <div class="social-icon">
               <svg>
-                <use xlink:href="ressources/icons.svg#twitter-2">
+                <use xlink:href="ressources/icons.svg#linkedin-2">
                   <a href="#"></a>
                 </use>
               </svg>
               <svg>
-                <use xlink:href="ressources/icons.svg#insta-2">
+                <use xlink:href="ressources/icons.svg#pinterest-2">
                   <a href="#"></a>
                 </use>
               </svg>
               <svg>
-                <use xlink:href="ressources/icons.svg#facebook-2">
+                <use xlink:href="ressources/icons.svg#behance-2">
                   <a href="#"></a>
                 </use>
               </svg>
@@ -167,10 +167,7 @@
       const cursor = document.querySelector('.cursor')
 
       document.addEventListener('mousemove', (e) => {
-        cursor.setAttribute(
-          'style',
-          'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;'
-        )
+        cursor.setAttribute('style', 'top: ' + (e.pageY - 27) + 'px; left: ' + (e.pageX - 27) + 'px;')
       })
       document.addEventListener('click', () => {
         cursor.classList.add('expand')
@@ -178,6 +175,17 @@
         setTimeout(() => {
           cursor.classList.remove('expand')
         }, 500)
+      })
+
+      document.addEventListener('mouseover', (e) => {
+        const element = e.target
+        const computed = window.getComputedStyle(element)['cursor']
+        console.log(computed)
+        if (computed !== 'auto') {
+          cursor.classList.add('over-anim')
+        } else {
+          cursor.classList.remove('over-anim')
+        }
       })
     </script>
   </body>

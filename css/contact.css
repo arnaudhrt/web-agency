@@ -54,6 +54,10 @@ a {
   animation: cursorAnim .5s forwards;
   border: 1px solid #f00544;
 }
+.over-anim {
+  transform: scale(0);
+  transition: 300ms;
+}
 @keyframes cursorAnim {
   0% {
       transform: scale(1);

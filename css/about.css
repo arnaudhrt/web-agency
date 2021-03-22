@@ -42,9 +42,9 @@ section span {
 
 /* ------------------ Navigation ------------------ */
 .cursor {
-  width: 55px;
-  height: 55px;
-  border: 1px solid #DDD;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
   border-radius: 50%;
   position: absolute;
   transition-duration: 300ms;
@@ -53,7 +53,7 @@ section span {
   z-index: 10000;
 }
 .expand {
-  animation: cursorAnim .5s forwards;
+  animation: cursorAnim 0.5s forwards;
   border: 1px solid #f00544;
 }
 .over-anim {
@@ -62,14 +62,14 @@ section span {
 }
 @keyframes cursorAnim {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(3);
+    transform: scale(3);
   }
   100% {
-      transform: scale(1);
-      opacity: 0;
+    transform: scale(1);
+    opacity: 0;
   }
 }
 nav {
@@ -82,16 +82,6 @@ nav {
 /* Logo */
 .nav-logo {
   margin-left: 35px;
-}
-.nav-logo a {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 48px;
-  color: var(--text-color-white);
-}
-.nav-logo span {
-  color: var(--text-color-red);
-  font-weight: bold;
 }
 
 /* Bloc left */
@@ -372,17 +362,17 @@ nav {
     z-index: 30;
   }
 }
-@media screen and (max-width: 700px) {
-  .nav-logo a {
-    font-size: 38px;
+@media screen and (max-width: 550px) {
+  .nav-logo img {
+    width: 270px;
   }
 }
 @media screen and (max-width: 500px) {
   .nav-logo {
     margin-left: 20px;
   }
-  .nav-logo a {
-    font-size: 30px;
+  .nav-logo img {
+    width: 240px;
   }
   .menu-open {
     width: 20px;

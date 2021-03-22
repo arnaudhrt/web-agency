@@ -514,7 +514,7 @@ nav {
   transition: left 0.8s ease-in-out;
 }
 .who.switch {
-    left: -100vw;
+  left: -100vw;
 }
 .container-who {
   width: 80%;
@@ -548,7 +548,7 @@ nav {
 .container-who h1 {
   font-family: var(--font-poppins);
   font-weight: bold;
-  font-size: 140px;
+  font-size: 134px;
   line-height: 215px;
   color: var(--text-color-white);
   position: absolute;
@@ -564,8 +564,8 @@ nav {
 }
 .click-right svg {
   transform: rotate(270deg);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   fill: var(--text-color-red);
 }
 @media screen and (min-width: 1500px) {
@@ -695,7 +695,7 @@ nav {
   transition: left 0.8s ease-in-out;
 }
 .where.switch {
-    left: 0;
+  left: 0;
 }
 .container-where {
   width: 80%;
@@ -731,12 +731,13 @@ nav {
   line-height: 45px;
   color: var(--text-color-white);
   margin: 0 170px 0 400px;
+  transform: translateY(7%);
 }
 .container-where h1 {
   text-align: end;
   font-family: var(--font-poppins);
   font-weight: bold;
-  font-size: 140px;
+  font-size: 134px;
   line-height: 215px;
   color: var(--text-color-white);
   position: absolute;
@@ -755,8 +756,8 @@ nav {
 }
 .click-left svg {
   transform: rotate(270deg);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   fill: var(--text-color-red);
   transform: rotate(90deg);
 }
@@ -800,10 +801,6 @@ nav {
     top: -90px;
     left: -60px;
   }
-  .click-left svg {
-    width: 50px;
-    height: 50px;
-  }
   .container-map {
     top: -50px;
     left: -30px;
@@ -820,6 +817,10 @@ nav {
 @media screen and (max-width: 1080px) {
   .click-left {
     top: -70px;
+  }
+  .click-left svg {
+    width: 50px;
+    height: 50px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -890,28 +891,45 @@ nav {
   }
 }
 
+@media screen and (max-height: 850px) {
+  .where {
+    height: auto;
+    margin-top: 200px;
+  }
+  .who {
+    height: auto;
+    margin-top: 200px;
+  }
+  body {
+    height: auto;
+    overflow-y: visible;
+  }
+  footer {
+    top: 830px;
+    padding-bottom: 30px;
+  }
+}
 /* ------------------ footer ------------------ */
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0 ;
-  }
-  footer div {
-    margin: 0 30px;
-  }
-  footer div svg {
-    width: 30px;
-    height: 30px;
-    fill: var(--text-color-red);
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-  }
-  footer div svg:hover {
-    fill: var(--text-color-white);
-    transform: scale(1.3);
-  }
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div {
+  margin: 0 30px;
+}
+footer div svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--text-color-red);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+footer div svg:hover {
+  fill: var(--text-color-white);
+  transform: scale(1.3);
+}
